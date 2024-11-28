@@ -1,0 +1,59 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#part1 {
+	/* border: 0.2rem solid red; */
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container {
+	height: auto;
+	width: 20%;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+#part2 {
+	/* border: 0.2rem solid blue; */
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.stickers {
+	display: flex;
+	justify-content: center;
+}
+
+.sticker {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	height: auto;
+}
+
+
+#part3 {
+	/* border: 0.2rem solid green; */
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.opciones {
+	display: flex;
+	justify-content: center;
+}
