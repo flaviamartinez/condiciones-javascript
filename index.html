@@ -10,7 +10,7 @@
 	<div class="container">
 		<div id="part1">
 			<div class="img-container">
-				<img src="assets/img/ferret.jpeg" alt="ferret">
+				<img id="part1-img" src="assets/img/ferret.jpeg" alt="ferret">
 			</div>
 		</div>
 		<div id="part2">
@@ -20,28 +20,28 @@
 					<div class="sticker-img">
 						<img src="assets/img/sticker-1.jpg" alt="">
 					</div>
-					<input type="text">
+					<input id="first-sticker" type="text">
 				</div>
 				<div class="sticker">
 					<div class="sticker-img">
 						<img src="assets/img/sticker-2.jpg" alt="">
 					</div>
-					<input type="text">
+					<input id="second-sticker" type="text">
 				</div>
 				<div class="sticker">
 					<div class="sticker-img">
 						<img src="assets/img/sticker-3.png" alt="">
 					</div>
-					<input type="text">
+					<input id="third-sticker" type="text">
 				</div>
 			</div>
-			<p></p>
-			<button>Verificar</button>
+			<p id="sticker-p"></p>
+			<button id="sticker-btn">Verificar</button>
 		</div>
 		<div id="part3">
 			<h3>Ingresa el password</h3>
 			<div class="opciones">
-				<select class="opcion">
+				<select id="first-select" class="opcion">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -52,7 +52,7 @@
 					<option>8</option>
 					<option>9</option>
 				</select>
-				<select class="opcion">
+				<select id="second-select" class="opcion">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -63,7 +63,7 @@
 					<option>8</option>
 					<option>9</option>
 				</select>
-				<select class="opcion">
+				<select id="third-select" class="opcion">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -75,8 +75,10 @@
 					<option>9</option>
 				</select>
 			</div>
-			<button>Ingresar</button>
+			<button id="password-btn"">Ingresar</button>
+			<p id="password-p"></p>
 		</div>
 	</div>
+	<script src="./assets/js/index.js"></script>
 </body>
 </html>
