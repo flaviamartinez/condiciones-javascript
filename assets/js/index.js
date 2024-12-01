@@ -1,9 +1,8 @@
 // Parte 1
 const image = document.querySelector('.img-container')
 
-
 image.addEventListener('click', () => {
-	if(image.style.border === 'none'){
+	if(image.style.border === 'none' || image.style.border === ''){
 		image.style.border = '2px solid red'
 	} else {
 		image.style.border = 'none'
@@ -20,16 +19,30 @@ const parrafo = document.querySelector('#sticker-p')
 
 
 stickerBtn.addEventListener('click', () => {
-	const firstInput = Number(firstSticker.value) || 0
-	const secondInput = Number(secondSticker.value) || 0
-	const thirdInput = Number(thirdSticker.value) || 0
-
-	const sum = firstInput + secondInput + thirdInput
-	if(sum <= 10) {
-		parrafo.innerHTML = `Llevas ${sum} stickers`
-	} else {
-		parrafo.innerHTML = 'Llevas demasiados stickers'
+	if (isNaN(firstSticker.value) || firstSticker.value.trim() === ''){
+		parrafo.textContent = 'El valor del primer sticker no es numérico'
+		return
 	}
+	if (isNaN(secondSticker.value) || secondSticker.value.trim() === ''){
+		parrafo.textContent = 'El valor del segundo sticker no es numérico'
+		return
+	}
+	if (isNaN(thirdSticker.value) || thirdSticker.value.trim() === ''){
+		parrafo.textContent = 'El valor del tercer sticker no es numérico'
+		return
+	}
+
+	const sum = +firstSticker.value + +secondSticker.value + +thirdSticker.value
+
+	if(sum <= 10) {
+		parrafo.textContent = `Llevas ${sum} stickers`
+	} else {
+		parrafo.textContent = 'Llevas demasiados stickers'
+	}
+
+	firstSticker.value = ''
+	secondSticker.value = ''
+	thirdSticker.value = ''
 }
 )
 
@@ -41,12 +54,19 @@ const passwordBtn = document.querySelector("#password-btn")
 const parrafoPass = document.querySelector('#password-p')
 
 passwordBtn.addEventListener('click', () => {
-	if (firstSelect.value == '9' && secondSelect.value == '1' && thirdSelect.value == '1'){
-		parrafoPass.innerHTML = 'password 1 correcto'
-	} else if (firstSelect.value == 7 && secondSelect.value == 1 && thirdSelect.value == 4) {
-		parrafoPass.innerHTML = 'password 2 correcto'
-	} else{
-		parrafoPass.innerHTML = 'password incorrecto'
+	if (
+	  firstSelect.value === '9' &&
+	  secondSelect.value === '1' &&
+	  thirdSelect.value === '1'
+	) {
+	  parrafoPass.textContent = 'Password 1 correcto';
+	} else if (
+	  firstSelect.value === '7' &&
+	  secondSelect.value === '1' &&
+	  thirdSelect.value === '4'
+	) {
+	  parrafoPass.textContent = 'Password 2 correcto';
+	} else {
+	  parrafoPass.textContent = 'Password incorrecto';
 	}
-}
-)
+})
